@@ -1,0 +1,84 @@
+/***************************
+            Main Navigation
+***************************/
+
+.nav {
+  float: left;
+  display: none;
+  width: auto;
+  opacity: 0;
+  clear: both;
+  margin-top: 0.85rem;
+  margin-left: 3.8rem;
+  transform: scale(0) translateX(-200);
+  transition: all 3s;
+}
+.nav__item {
+  display: inline-block;
+  width: auto;
+  /* min-width: 20%; */
+  padding: 12px 2rem;
+}
+.nav__item:hover > .nav__link,
+.nav__link:active {
+  color: #5a4830;
+  font-weight: bold;
+  border-bottom: 4px solid #a59580;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #a59580;
+  padding: 2px 0;
+}
+
+.toggle_btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+}
+.navigation__button {
+  position: absolute;
+  top: 2rem;
+  left: 1.4rem;
+  display: inline-block;
+  width: 30px;
+  height: 4px;
+  color: #a59580;
+  font-stretch: semi-expanded;
+  border-top: 4px solid #0b6b98;
+  border-bottom: 4px solid #0b6b98;
+  cursor: pointer;
+}
+
+.navigation__button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -14px;
+  border: 4 solid #0b6b98;
+  background: #0b6b98;
+  height: 8px;
+  display: block;
+  width: inherit;
+}
+.navigation__button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -14px;
+  border: 4 solid #0b6b98;
+  background: #0b6b98;
+  height: 8px;
+  display: block;
+  width: inherit;
+}
+
+.toggle_btn:checked + .navigation__icon {
+  opacity: 0.5;
+}
+.toggle_btn:checked ~ .nav {
+  display: block;
+  opacity: 1;
+  transform: scale(1) translate(0);
+}

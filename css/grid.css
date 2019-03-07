@@ -1,0 +1,278 @@
+/***************************
+            Basic reset
+***************************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+/*
+    Basic grid system
+*/
+.row {
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+[class^="row-col-"] {
+  float: left;
+  /* border: 1px solid olivedrab; */
+  margin: 0.25%;
+  /* padding: 8px; */
+  height: auto;
+}
+[class^="row-col-"]:not(:last-child) {
+  margin-right: 0.5%;
+}
+
+.row-col-1 {
+  width: 99.45%;
+}
+.row-col-2 {
+  width: 49.37%;
+}
+.row-col-3 {
+  width: 32.65%;
+}
+.row-col-4 {
+  width: 24.3%;
+}
+.row-col-5 {
+  width: 19.3%;
+}
+.row-col-6 {
+  width: 15.95%;
+}
+.row-col-7 {
+  width: 13.57%;
+}
+.row-col-8 {
+  width: 11.77%;
+}
+.row-col-9 {
+  width: 10.38%;
+}
+.row-col-10 {
+  width: 9.27%;
+}
+.row-col-11 {
+  width: 8.36%;
+}
+.row-col-12 {
+  width: 7.6%;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.row-col-2Thirds {
+  width: 74.38%;
+}
+
+/*****************************************************
+                  Adjust gird to width
+  *****************************************************/
+@media (max-width: 1050px) {
+  .row-col-1 {
+    width: 99.45%;
+  }
+  .row-col-2 {
+    width: 49.37%;
+  }
+  .row-col-3 {
+    width: 44.65%;
+  }
+  .row-col-4 {
+    width: 36.3%;
+  }
+  .row-col-5 {
+    width: 31.3%;
+  }
+  .row-col-6 {
+    width: 27.95%;
+  }
+  .row-col-7 {
+    width: 25.57%;
+  }
+  .row-col-8 {
+    width: 24.77%;
+  }
+  .footer__topRow > .row-col-3 {
+    float: none;
+    margin: 1rem auto;
+    width: 80%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1034px) {
+  .row-col-2Thirds {
+    width: 61%;
+  }
+
+  .trader-img-1,
+  .trader-img-3 {
+    margin-left: 4.5%;
+  }
+}
+
+/*  Tablets View-port */
+@media (max-width: 786px) {
+  header.row.header {
+    height: 30.2rem;
+  }
+  .center-position {
+    margin-top: 6.7rem;
+  }
+  .row-col-1 {
+    width: 99.45%;
+  }
+  .row-col-2 {
+    width: 49.37%;
+  }
+  .row-col-3 {
+    width: 49.37%;
+  }
+  .row-col-4 {
+    width: 44.65%;
+  }
+  .row-col-5 {
+    width: 36.3%;
+  }
+  .row-col-6 {
+    width: 31.3%;
+  }
+  .row-col-7 {
+    width: 27.95%;
+  }
+  .row-col-8 {
+    width: 25.57%;
+  }
+
+  .center-position-2 {
+    transform: translate(0);
+  }
+  .card:hover {
+    transform: scale(1);
+    margin-left: 1rem;
+    margin-right: 3rem !important;
+  }
+
+  .card:hover:last-child {
+    transform: scale(1);
+    margin-left: 0 !important;
+  }
+  .sample-projects {
+    text-align: center !important;
+    transform: translate(10%, 0);
+  }
+  .sample-projects > div {
+    margin: 1rem !important;
+  }
+  .footer .row .row-col-3 div {
+    text-align: center;
+  }
+  .footer-para {
+    border-right: none;
+  }
+
+  .row-col-2Thirds {
+    width: 50%;
+    margin: 0 1.2rem !important;
+  }
+  /*
+  [class^="row-col-"]:not(:last-child),
+  [class^="row-col-"] {
+    margin-right: 0 !important;
+  }
+  */
+
+  .row > div {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+/*  SMART-PHONE View-port */
+@media (max-width: 660px) {
+  .row-col-1 {
+    width: 99.45%;
+  }
+  .row-col-2 {
+    width: 99.45%;
+  }
+  .row-col-3 {
+    width: 89.37%;
+  }
+  .row-col-4 {
+    width: 84.65%;
+  }
+  .row-col-5 {
+    width: 36.3%;
+  }
+  .row-col-6 {
+    width: 31.3%;
+  }
+  .row-col-7 {
+    width: 27.95%;
+  }
+  .row-col-8 {
+    width: 25.57%;
+  }
+
+  .row-col-2Thirds {
+    width: 98%;
+  }
+
+  .feature__img {
+    position: relative;
+  }
+}
+
+/*  X-Small SMART-PHONE View-port */
+@media (max-width: 480px) {
+  .row-col-1 {
+    width: 99.45%;
+  }
+  .row-col-2 {
+    width: 99.45%;
+  }
+  .row-col-3 {
+    width: 99.45%;
+  }
+  .row-col-4 {
+    width: 99.45%;
+  }
+  .row-col-5 {
+    width: 99.45%;
+  }
+  .row-col-6 {
+    width: 99.45%;
+  }
+  .row-col-7 {
+    width: 99.45%;
+  }
+  .row-col-8 {
+    width: 99.45%;
+  }
+  .sample-projects {
+    text-align: center !important;
+    transform: translate(0);
+  }
+  .sample-projects > div {
+    margin: 0.5rem 0 !important;
+  }
+}
